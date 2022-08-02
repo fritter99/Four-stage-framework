@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="gridLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>70</y>
+      <width>479</width>
+      <height>301</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="1" column="2">
+      <widget class="QLineEdit" name="lineEdit_ad"/>
+     </item>
+     <item row="6" column="2">
+      <widget class="QLineEdit" name="lineEdit_fu"/>
+     </item>
+     <item row="8" column="2">
+      <widget class="QLineEdit" name="lineEdit_rhof"/>
+     </item>
+     <item row="6" column="1">
+      <widget class="QLabel" name="fu">
+       <property name="text">
+        <string>Ultimate strength of the FRCM fibers (MPa)</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="2">
+      <widget class="QComboBox" name="configCombo">
+       <item>
+        <property name="text">
+         <string>SB,CN</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>UW,CN</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>FW,CN</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>UW,DCN</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLabel" name="fc">
+       <property name="text">
+        <string>Compressive strength of concrete (MPa)</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLabel" name="ad">
+       <property name="text">
+        <string>Shear span ratio</string>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="1">
+      <widget class="QLabel" name="rhof">
+       <property name="text">
+        <string>Reinforcement ratio of FRCM</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLabel" name="bw">
+       <property name="text">
+        <string>Width of the beam section (mm)</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="2">
+      <widget class="QLineEdit" name="lineEdit_Es"/>
+     </item>
+     <item row="3" column="1">
+      <widget class="QLabel" name="rhosy">
+       <property name="text">
+        <string>Reinforcement ratio of shear reinforcement</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="1">
+      <widget class="QLabel" name="Es">
+       <property name="text">
+        <string>Elastic modulus of fibers(GPa)</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="1">
+      <widget class="QLabel" name="config">
+       <property name="text">
+        <string>FRCM configuration</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QLineEdit" name="lineEdit_bw"/>
+     </item>
+     <item row="4" column="1">
+      <widget class="QLabel" name="fsy">
+       <property name="text">
+        <string>Yield strength of shear reinforcement(MPa)</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="2">
+      <widget class="QLineEdit" name="lineEdit_fsy"/>
+     </item>
+     <item row="2" column="2">
+      <widget class="QLineEdit" name="lineEdit_fc"/>
+     </item>
+     <item row="3" column="2">
+      <widget class="QLineEdit" name="lineEdit_rhosy"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_Vf">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>400</y>
+      <width>141</width>
+      <height>24</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Vf">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>400</y>
+      <width>151</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Shear capacity(kN)</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="start">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>450</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Start</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <tabstops>
+  <tabstop>lineEdit_bw</tabstop>
+  <tabstop>lineEdit_ad</tabstop>
+  <tabstop>lineEdit_fc</tabstop>
+  <tabstop>lineEdit_rhosy</tabstop>
+  <tabstop>lineEdit_fsy</tabstop>
+  <tabstop>lineEdit_Es</tabstop>
+  <tabstop>lineEdit_fu</tabstop>
+  <tabstop>configCombo</tabstop>
+  <tabstop>lineEdit_rhof</tabstop>
+  <tabstop>lineEdit_Vf</tabstop>
+  <tabstop>start</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
