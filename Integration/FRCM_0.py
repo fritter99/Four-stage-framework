@@ -17,11 +17,24 @@ class MainWindow(QMainWindow,Ui_MainWindow):
         
         self.setupUi(self)
         self.setWindowFlags(Qt.FramelessWindowHint)
-        
+        self.setWindowTitle('FRCM-SSE')
         #设置字体
-        self.font=QFont("Times New Roman",10)
+        self.font=QFont("Times New Roman",9)
+        
         self.configCombo.setFont(self.font)
         self.config.setFont(self.font)
+        font=QFont()
+        font.setBold(True)
+        font.setFamily("Times New Roman")
+        font.setPointSize(15)
+        #font.setItalic(True)
+        #strT = '<span style=\" color: #87CEFA;\">%s</span>' %('FRCM-SSE')
+        #self.title.setFont(font)
+        #self.title.setText("%s" %(strT))
+        font.setPointSize(10)
+        font.setItalic(True)
+        self.explanation.setFont(font)
+
         self.fc.setFont(self.font)
         self.lineEdit_fc.setFont(self.font)
         self.ad.setFont(self.font)
@@ -40,7 +53,11 @@ class MainWindow(QMainWindow,Ui_MainWindow):
         self.lineEdit_fsy.setFont(self.font)
         self.Vf.setFont(self.font)
         self.lineEdit_Vf.setFont(self.font)
-        self.start.setFont(self.font)
+        font.setPointSize(10)
+        font.setBold(True)
+        font.setItalic(False)
+        self.start.setFont(font)
+
 
         #设置默认值
         self.lineEdit_bw.setText(str(150))
@@ -76,9 +93,10 @@ class MainWindow(QMainWindow,Ui_MainWindow):
         self.lineEdit_Vf.setText(str(round(Vf,1)))
         
         
-
+import picture_rc
 app =QApplication(sys.argv)
-apply_stylesheet(app, theme='dark_teal.xml')
-app.setStyleSheet(qdarkstyle.load_stylesheet_pyqt5())
+#apply_stylesheet(app, theme='light_blue.xml')
+from qdarkstyle.light.palette import LightPalette
+app.setStyleSheet(qdarkstyle.load_stylesheet(qt_api='pyqt5', palette=LightPalette()))
 window = MainWindow()
 window.show()
